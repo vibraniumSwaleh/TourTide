@@ -2,10 +2,10 @@
   --color-primary: #eb2f64;
   --color-primary-light: #ff3366;
   --color-primary-dark: #ba265d;
-  --color-grey-ligh-1: #faf9f9;
-  --color-grey-ligh-2: #f4f2f2;
-  --color-grey-ligh-3: #f0eeee;
-  --color-grey-ligh-4: #ccc;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
@@ -36,31 +36,66 @@ body {
   height: 3.25rem; }
 
 .logo {
-  height: 100%; }
-
-.search__icon {
-  height: 2rem;
-  width: 2rem; }
-
-.user-nav__icon {
-  height: 2.25rem;
-  width: 2.25rem; }
-
-.user-nav__photo-containter {
-  height: 3.75rem; }
-
-.user-nav__user-photo {
   height: 100%;
-  border-radius: 50%; }
+  margin-left: 3rem; }
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 40%; }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: none;
+    border-radius: 100px;
+    padding: 0.7rem 2rem;
+    background-color: var(--color-grey-light-2);
+    width: 90%;
+    margin-right: -3.25rem;
+    transition: all 0.2s; }
+    .search__input:focus {
+      width: 100%;
+      outline: none;
+      background-color: var(--color-grey-light-3); }
+    .search__input::--webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4); }
+  .search__input:focus + .search__button {
+    background-color: var(--color-grey-light-3); }
+  .search__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+    transition: all 0.2s; }
+    .search__button:focus {
+      outline: none; }
+    .search__button:active {
+      transform: translateY(2px); }
+  .search__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3); }
+
+.user-nav {
+  display: flex; }
+  .user-nav__icon {
+    height: 2.25rem;
+    width: 2.25rem; }
+  .user-nav__photo-containter {
+    height: 3.75rem; }
+  .user-nav__user-photo {
+    height: 100%;
+    border-radius: 50%; }
 
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #ff3366;
   --color-primary-dark: #ba265d;
-  --color-grey-ligh-1: #faf9f9;
-  --color-grey-ligh-2: #f4f2f2;
-  --color-grey-ligh-3: #f0eeee;
-  --color-grey-ligh-4: #ccc;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
@@ -76,7 +111,7 @@ body {
 .container {
   max-width: 120rem;
   margin: 8rem auto;
-  background-color: var(--color-grey-ligh-1);
+  background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
   min-height: 80vh; }
 
@@ -84,7 +119,11 @@ body {
   display: flex; }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 7rem;
+  font-size: 1.4rem;
   background-color: var(--color-white);
   border-bottom: var(--color-grey-light-2); }
 
