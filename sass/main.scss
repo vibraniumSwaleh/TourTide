@@ -1,6 +1,6 @@
 @import "abstracts/colors";
-@import "abstracts/variables";
 @import "abstracts/media-query";
+@import "abstracts/variables";
 
 @import "base/base";
 @import "base/typography";
@@ -10,3 +10,7 @@
 // @import "layout/";
 
 @import "pages/home";
+
+@import "layout/header";
+@import "layout/main";
+@import "layout/sidebar";
