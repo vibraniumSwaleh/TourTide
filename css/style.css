@@ -32,6 +32,27 @@ body {
   line-height: 1.6;
   font-weight: 400; }
 
+.logo-container {
+  height: 3.25rem; }
+
+.logo {
+  height: 100%; }
+
+.search__icon {
+  height: 2rem;
+  width: 2rem; }
+
+.user-nav__icon {
+  height: 2.25rem;
+  width: 2.25rem; }
+
+.user-nav__photo-containter {
+  height: 3.75rem; }
+
+.user-nav__user-photo {
+  height: 100%;
+  border-radius: 50%; }
+
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #ff3366;

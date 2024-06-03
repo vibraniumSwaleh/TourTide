@@ -5,9 +5,9 @@
 @import "base/base";
 @import "base/typography";
 
-// @import "components/";
-
-// @import "layout/";
+@import "components/logo";
+@import "components/search-bar";
+@import "components/user-nav";
 
 @import "pages/home";
 
