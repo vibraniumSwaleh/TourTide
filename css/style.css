@@ -209,6 +209,13 @@ body {
   height: 80rem;
   flex: 1; }
 
+.overview {
+  display: flex; }
+  .overview__icon-location, .overview__icon-star {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); }
+
 .sidebar {
   background-color: var(--color-grey-dark-1);
   display: flex;

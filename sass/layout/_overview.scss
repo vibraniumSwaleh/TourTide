@@ -1,0 +1,30 @@
+.overview {
+  display: flex;
+
+  &__heading {
+  }
+
+  &__stars {
+  }
+
+  &__icon-star {
+  }
+
+  &__location {
+  }
+
+  &__icon-location,
+  &__icon-star {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__rating {
+    &-average {
+    }
+
+    &-count {
+    }
+  }
+}
