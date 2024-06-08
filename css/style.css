@@ -160,6 +160,12 @@ body {
   padding: 2.5rem;
   text-align: center; }
 
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    display: block;
+    width: 100%; }
+
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #ff3366;
@@ -200,7 +206,6 @@ body {
   border-bottom: var(--color-grey-light-2); }
 
 .hotel-view {
-  background-color: orange;
   height: 80rem;
   flex: 1; }
 
