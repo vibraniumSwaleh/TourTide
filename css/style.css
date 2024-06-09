@@ -362,6 +362,9 @@ body {
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
   min-height: 80vh; }
+  @media screen and (max-width: 75em) {
+    .container {
+      margin: 0; } }
 
 .content {
   display: flex; }
