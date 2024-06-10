@@ -35,11 +35,21 @@ body {
   box-shadow: var(--shadow-dark);
   min-height: 80vh;
 
-  @include respond(tab-land) {
+  @include respond(bp-largest) {
     margin: 0;
+  }
+
+  @include respond (bp-large) {
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
   }
 }
 
 .content {
   display: flex;
+  
+  @include respond(bp-medium) {
+    flex-direction: column;
+  }
 }

@@ -3,4 +3,55 @@
   color: var(--color-grey-light-4);
   padding: 2.5rem;
   text-align: center;
+
+  &__owner:link,
+  &__owner:visited {
+    color: var(--color-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-primary);
+  }
+
+  &__owner:hover {
+    color: var(--color-white);
+    border-bottom: 1px solid currentColor;
+  }
+
+  @include respond(bp-medium) {
+    display: none;
+  }
+}
+
+.legal__owner-2 {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  padding: 2.5rem;
+  text-align: center;
+  padding: 4.5rem;
+  border-top: var(--line);
+  display: none;
+
+  @include respond(bp-medium) {
+    display: block;
+    background-color: var(--color-grey-dark-1);
+  }
+
+  @include respond(bp-small) {
+    padding: 4rem;
+  }
+
+  @include respond(bp-smallest) {
+    padding: 3.5rem;
+  }
+
+  @include respond(bp-x-smallest) {
+    padding: 3rem;
+  }
+
+  &-name {
+    text-decoration: none;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-primary);
+  }
 }

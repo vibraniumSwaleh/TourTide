@@ -2,11 +2,23 @@
   padding: 3.5rem 0;
   text-align: center;
 
+  @include respond(bp-medium) {
+    padding: 2.5rem 0;
+  }
+
+  @include respond(bp-x-smallest) {
+    padding: 2rem 0;
+  }
+
   &__book-now {
     font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 2.5rem;
+    
+    @include respond(bp-x-smallest) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -34,6 +46,11 @@
 
   &__visible {
     padding: 2rem 7.5rem;
+
+    @include respond(bp-x-smallest) {
+      font-size: 1.3rem;
+      padding: 1.8rem 7rem;
+    }
   }
 
   &__invisible {
@@ -41,6 +58,11 @@
     padding: 2rem 0;
     left: 0;
     top: -100%;
+
+    @include respond(bp-x-smallest) {
+      font-size: 1.3rem;
+      padding: 1.8rem 0rem;
+    }
   }
 
   &:hover {

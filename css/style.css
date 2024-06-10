@@ -32,6 +32,9 @@ html {
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -50,6 +53,11 @@ body {
   justify-content: center;
   align-items: center;
   flex: 0 0 40%; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 1 100%;
+      background-color: var(--color-grey-light-2); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -125,10 +133,23 @@ body {
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem; }
+  @media screen and (max-width: 56.25em), only screen and (hover: none) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
+  @media only screen and (max-width: 25em) {
+    .side-nav {
+      font-size: 1.2rem; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: 0.5rem; }
+      @media screen and (max-width: 56.25em), only screen and (hover: none) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0; } }
+    @media screen and (max-width: 56.25em), only screen and (hover: none) {
+      .side-nav__item {
+        flex: 1; } }
   .side-nav__item::before {
     content: '';
     position: absolute;
@@ -154,17 +175,72 @@ body {
     display: flex;
     align-items: center;
     z-index: 1; }
+    @media screen and (max-width: 56.25em), only screen and (hover: none) {
+      .side-nav__link:link, .side-nav__link:visited {
+        justify-content: center;
+        padding: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        padding: 1.5rem .5rem; } }
+    @media only screen and (max-width: 25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        padding: 1rem 0rem; } }
   .side-nav__icon {
     height: 1.75rem;
     width: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        margin: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-bottom: .5rem; } }
 
 .legal {
   font-size: 1.2rem;
   color: var(--color-grey-light-4);
   padding: 2.5rem;
   text-align: center; }
+  .legal__owner:link, .legal__owner:visited {
+    color: var(--color-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-primary); }
+  .legal__owner:hover {
+    color: var(--color-white);
+    border-bottom: 1px solid currentColor; }
+  @media screen and (max-width: 56.25em), only screen and (hover: none) {
+    .legal {
+      display: none; } }
+
+.legal__owner-2 {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  padding: 2.5rem;
+  text-align: center;
+  padding: 4.5rem;
+  border-top: var(--line);
+  display: none; }
+  @media screen and (max-width: 56.25em), only screen and (hover: none) {
+    .legal__owner-2 {
+      display: block;
+      background-color: var(--color-grey-dark-1); } }
+  @media only screen and (max-width: 37.5em) {
+    .legal__owner-2 {
+      padding: 4rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .legal__owner-2 {
+      padding: 3.5rem; } }
+  @media only screen and (max-width: 25em) {
+    .legal__owner-2 {
+      padding: 3rem; } }
+  .legal__owner-2-name {
+    text-decoration: none;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-primary); }
 
 .gallery {
   display: flex; }
@@ -182,6 +258,9 @@ body {
   background-color: transparent;
   border-bottom: 1px solid currentColor;
   transition: all 0.2s; }
+  @media only screen and (max-width: 25em) {
+    .btn-inline {
+      font-size: 1.2rem; } }
   .btn-inline span {
     margin-left: 3px;
     transition: margin-left .2s; }
@@ -257,6 +336,13 @@ body {
   padding: 3rem;
   margin-bottom: 3.5rem;
   overflow: hidden; }
+  @media screen and (max-width: 56.25em), only screen and (hover: none) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .review {
+      width: 100%; } }
   .review__text {
     position: relative;
     z-index: 1; }
@@ -298,11 +384,20 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center; }
+  @media screen and (max-width: 56.25em), only screen and (hover: none) {
+    .cta {
+      padding: 2.5rem 0; } }
+  @media only screen and (max-width: 25em) {
+    .cta {
+      padding: 2rem 0; } }
   .cta__book-now {
     font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 2.5rem; }
+    @media only screen and (max-width: 25em) {
+      .cta__book-now {
+        font-size: 1.5rem; } }
 
 .btn {
   position: relative;
@@ -321,11 +416,19 @@ body {
     transition: all 0.2s; }
   .btn__visible {
     padding: 2rem 7.5rem; }
+    @media only screen and (max-width: 25em) {
+      .btn__visible {
+        font-size: 1.3rem;
+        padding: 1.8rem 7rem; } }
   .btn__invisible {
     position: absolute;
     padding: 2rem 0;
     left: 0;
     top: -100%; }
+    @media only screen and (max-width: 25em) {
+      .btn__invisible {
+        font-size: 1.3rem;
+        padding: 1.8rem 0rem; } }
   .btn:hover {
     background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light)); }
   .btn:focus {
@@ -365,9 +468,17 @@ body {
   @media screen and (max-width: 75em) {
     .container {
       margin: 0; } }
+  @media only screen and (max-width: 68.75em) {
+    .container {
+      max-width: 100%;
+      width: 100%;
+      min-height: 100vh; } }
 
 .content {
   display: flex; }
+  @media screen and (max-width: 56.25em), only screen and (hover: none) {
+    .content {
+      flex-direction: column; } }
 
 .header {
   display: flex;
@@ -377,6 +488,11 @@ body {
   font-size: 1.4rem;
   background-color: var(--color-white);
   border-bottom: var(--line); }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      flex-wrap: wrap;
+      height: 10rem;
+      align-content: space-around; } }
 
 .hotel-view {
   flex: 1; }
@@ -391,6 +507,13 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem; } }
+    @media only screen and (max-width: 25em) {
+      .overview__heading {
+        font-size: 1.5rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -404,6 +527,10 @@ body {
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary); }
+    @media only screen and (max-width: 25em) {
+      .overview__icon-location, .overview__icon-star {
+        width: 1.5rem;
+        height: 1.5rem; } }
   .overview__rating {
     display: flex;
     flex-direction: column;
@@ -414,13 +541,22 @@ body {
     margin-left: 3rem;
     padding: 0 2.25rem;
     align-self: stretch; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        padding: 0 1.5rem; } }
     .overview__rating-average {
       font-size: 2.25rem;
       font-weight: 300;
       margin-bottom: -3px; }
+      @media only screen and (max-width: 37.5em) {
+        .overview__rating-average {
+          font-size: 1.8rem; } }
     .overview__rating-count {
       font-size: 0.8rem;
       text-transform: uppercase; }
+      @media only screen and (max-width: 37.5em) {
+        .overview__rating-count {
+          font-size: 0.7rem; } }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -435,6 +571,12 @@ body {
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line); }
+  @media screen and (max-width: 56.25em), only screen and (hover: none) {
+    .details {
+      padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .details {
+      flex-direction: column; } }
 
 .description {
   margin-right: 4.5rem;
@@ -442,6 +584,14 @@ body {
   box-shadow: var(--shadow-light);
   padding: 3rem;
   flex: 0 0 60%; }
+  @media screen and (max-width: 56.25em), only screen and (hover: none) {
+    .description {
+      padding: 2rem;
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
 
 .user-reviews {
   display: flex;

@@ -9,6 +9,10 @@
   border-bottom: 1px solid currentColor;
   transition: all 0.2s;
 
+  @include respond(bp-x-smallest) {
+    font-size: 1.2rem;
+  }
+
   & span {
     margin-left: 3px;
     transition: margin-left .2s;
