@@ -71,8 +71,7 @@ body {
     transition: all 0.2s; }
     .search__input:focus {
       width: 100%;
-      outline: none;
-      background-color: var(--color-grey-light-3); }
+      outline: none; }
     .search__input::--webkit-input-placeholder {
       font-weight: 100;
       color: var(--color-grey-light-4); }
